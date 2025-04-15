@@ -1,0 +1,485 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
+  .icon-small {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(to right, #3b82f6, #2dd4bf);
+    color: white;
+    padding: 16px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .project-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  .school-name {
+    color: #e0f2fe;
+  }
+  
+  .header-project {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .project-label {
+    font-weight: 600;
+  }
+  
+  /* Navigation */
+  .navigation {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  
+  .nav-tabs {
+    display: flex;
+    list-style: none;
+    overflow-x: auto;
+  }
+  
+  .nav-tabs li button {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    color: #666;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .nav-tabs li button.active {
+    color: #3b82f6;
+    border-bottom: 2px solid #3b82f6;
+  }
+  
+  /* Main content */
+  .main-content {
+    flex-grow: 1;
+    padding: 24px 0;
+  }
+  
+  .tab-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Buttons */
+  .button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .primary {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .secondary {
+    background-color: #e5e7eb;
+    color: #4b5563;
+  }
+  
+  .small {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+  
+  .blue { background-color: #3b82f6; color: white; }
+  .red { background-color: #ef4444; color: white; }
+  .yellow { background-color: #f59e0b; color: white; }
+  .green { background-color: #10b981; color: white; }
+  
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  
+  .link-button {
+    background: none;
+    border: none;
+    color: #4f46e5;
+    cursor: pointer;
+    margin-right: 12px;
+    font-size: 14px;
+  }
+  
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .data-table th {
+    text-align: left;
+    padding: 12px;
+    background-color: #f8fafc;
+    font-weight: 600;
+    font-size: 14px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .data-table td {
+    padding: 12px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .online {
+    background-color: #dcfce7;
+    color: #166534;
+  }
+  
+  .offline {
+    background-color: #fee2e2;
+    color: #b91c1c;
+  }
+  
+  /* Monitoring section */
+  .monitoring-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .monitoring-card {
+    background-color: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .monitoring-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1e40af;
+  }
+  
+  .chart-placeholder {
+    height: 160px;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+  }
+  
+  .control-section {
+    margin-top: 24px;
+  }
+  
+  .control-section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #4b5563;
+  }
+  
+  .placeholder-content {
+    padding: 48px 0;
+    text-align: center;
+    color: #64748b;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 48px 0 24px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    margin-bottom: 24px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .footer-section h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .team-info {
+    color: #9ca3af;
+  }
+  
+  .team-info p {
+    margin: 4px 0;
+  }
+  
+  .footer-bottom {
+    padding-top: 24px;
+    border-top: 1px solid #374151;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+  
+  /* Responsive */
+  @media (min-width: 768px) {
+    .header-content {
+      flex-direction: row;
+    }
+    
+    .monitoring-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .footer-section {
+      margin-bottom: 0;
+    }
+    /* Device cards */
+    .device-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .device-card {
+      background-color: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .device-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .device-info h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: #1f2937;
+    }
+
+    .device-location {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    .device-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mode-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mode-label {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+
+    .mode-label.manual {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+
+    .mode-label.automation {
+      background-color: #dbeafe;
+      color: #1e40af;
+    }
+
+    .mode-button, .expand-button {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background-color: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      cursor: pointer;
+    }
+
+    .mode-button:hover, .expand-button:hover {
+      background-color: #e5e7eb;
+    }
+
+    /* Sensor list */
+    .sensor-list {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .sensor-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .sensor-table th {
+      text-align: left;
+      padding: 12px;
+      background-color: #f8fafc;
+      font-weight: 600;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .sensor-table td {
+      padding: 12px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .power-button {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: none;
+    }
+
+    .power-button.on {
+      background-color: #fee2e2;
+      color: #b91c1c;
+    }
+
+    .power-button.off {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    .device-actions {
+      margin-top: 16px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Status badges */
+    .status-badge.online {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    .status-badge.offline {
+      background-color: #fee2e2;
+      color: #b91c1c;
+    }
+
+    /* Updated monitoring grid for 4 sensors */
+    @media (min-width: 768px) {
+      .monitoring-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .monitoring-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
