@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Droplet, Activity, Settings, List, BarChart2, Power, Sliders } from 'lucide-react';
+import { Activity, Settings, List, BarChart2, Power, Sliders } from 'lucide-react';
 import './WaterMonitor.css';
 
 export default function WaterMonitorWebsite() {
@@ -29,30 +29,6 @@ export default function WaterMonitorWebsite() {
         { id: 24, type: 'Temperature', status: 'Online', value: '26.1°C' }
       ]
     },
-    { 
-      id: 3, 
-      name: 'Trụ lọc 3', 
-      location: 'Hệ thống đầu vào',
-      mode: 'Manual',
-      sensors: [
-        { id: 31, type: 'pH', status: 'Online', value: '7.5' },
-        { id: 32, type: 'TDS', status: 'Offline', value: '280 ppm' },
-        { id: 33, type: 'Turbidity', status: 'Online', value: '1.8 NTU' },
-        { id: 34, type: 'Temperature', status: 'Online', value: '24.8°C' }
-      ]
-    },
-    { 
-      id: 4, 
-      name: 'Trụ lọc 4', 
-      location: 'Khu vực xử lý',
-      mode: 'Automation',
-      sensors: [
-        { id: 41, type: 'pH', status: 'Online', value: '7.1' },
-        { id: 42, type: 'TDS', status: 'Online', value: '310 ppm' },
-        { id: 43, type: 'Turbidity', status: 'Online', value: '2.2 NTU' },
-        { id: 44, type: 'Temperature', status: 'Online', value: '25.3°C' }
-      ]
-    }
   ]);
 
   const [activeTab, setActiveTab] = useState('devices');
@@ -101,22 +77,6 @@ export default function WaterMonitorWebsite() {
 
   return (
     <div className="app-container">
-      {/* Header with gradient */}
-      <header className="header">
-        <div className="container">
-          <div className="header-content">
-            <div>
-              <h1 className="project-title">Hệ thống Giám sát Nước</h1>
-              <p className="school-name">Trường Đại học Kỹ thuật</p>
-            </div>
-            <div className="header-project">
-              <Droplet className="icon" />
-              <span className="project-label">Dự án AquaTech</span>
-            </div>
-          </div>
-        </div>
-      </header>
-
       {/* Navigation */}
       <nav className="navigation">
         <div className="container">
@@ -316,31 +276,6 @@ export default function WaterMonitorWebsite() {
           )}
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-section">
-              <h3>Dự án Giám sát Nước</h3>
-              <p>Hệ thống Giám sát Chất lượng Nước Tiên tiến</p>
-            </div>
-            
-            <div className="footer-section">
-              <h4>Nhóm Dự án</h4>
-              <div className="team-info">
-                <p>Nhóm: AquaTech Solutions</p>
-                <p>MSSV: 2023001, 2023002, 2023003, 2023004</p>
-                <p>Giảng viên hướng dẫn: TS. Nguyễn Văn A</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="footer-bottom">
-            <p>© 2025 Trường Đại học Kỹ thuật. Bản quyền đã được bảo hộ.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
