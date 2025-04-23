@@ -1,0 +1,78 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: whitesmoke;
+}
+
+.login-form {
+    width: 450px;
+    height: 750 px; 
+    padding: 75px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 30px;
+    background-color: #c8d4d3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);}
+
+.login-form{
+    margin-bottom: 40px;
+    margin-top: 20px;
+    color:white;
+    font-weight: bold;
+}
+
+.label {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 50px;
+    font-weight: 600;
+    color: #f8f8f8;
+    display: block;
+    padding-left: 2px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    position: relative;
+    margin: 10px 0;
+    border: none ;
+}
+
+.form-group input {
+    background: #315a5a;
+    border: none ;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.login-button {
+    height: 45px;
+    width: 50%;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    background-size: 200%;
+    outline: none;
+    background: linear-gradient(to right, #5378b4, #2dd4bf);
+    color: white;
+    display: block;
+    margin: 5% auto 0;     /* 👈 Căn giữa ngang */
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-position: right;
+    font-size: 19px;
+    transition: 0.5s;
+}
